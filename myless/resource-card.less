@@ -1,0 +1,34 @@
+@charset "utf-8";
+@import "variables";
+
+.resource-card .h-c-tile__header {
+  overflow: hidden;
+}
+.resource-card__image {
+  height: 170px;
+  object-fit: cover;
+  width: 298px;
+}
+
+.resource-card-grid .resource-card-grid__navigation{
+  bottom: -30px;
+}
+
+.resource-card-set{
+  @media (min-width: @screen-600-min) {
+    flex-wrap: wrap;
+  }
+  @media (min-width: @screen-900-min) {
+    justify-content: center;
+  }
+}
+
+.resource-card-grid .resource-card-set {
+  display: flex;
+}
+
+.resource-card-grid__bottom-link {
+  margin-top: 55px;
+  text-align: center;
+  width: 100%;
+}

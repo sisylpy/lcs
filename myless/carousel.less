@@ -1,0 +1,213 @@
+@charset "utf-8";
+@import "variables";
+
+
+
+.h-c-carousel {
+  margin: 0 auto;
+  position: relative;
+}
+
+.h-c-carousel--simple{
+  @media (min-width: @screen-600-min) {
+    margin: 0 -1.03799%;
+  }
+}
+
+.h-c-carousel--tile {
+  margin: -10px -16px;
+  @media (min-width: @screen-600-min) {
+    margin: -10px 0;
+  }
+}
+
+.h-c-carousel--tile-small-only {
+  @media (min-width: @screen-600-min) {
+    margin: 0;
+  }
+}
+
+.h-c-carousel__wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.h-c-carousel--simple .h-c-carousel__wrap {
+  margin: 0 -16px;
+}
+
+.h-c-carousel--simple .h-c-carousel__wrap{
+  @media (min-width: @screen-600-min) {
+    flex-basis: 81.25734%;
+    width: 81.25734%;
+    margin-left: 9.37133%;
+    margin-right: 1.03799%;
+  }
+}
+
+
+
+
+.h-c-carousel--simple .h-c-carousel__item {
+  float: left;
+}
+
+.h-c-carousel--tile .h-c-carousel__wrap {
+  padding: 10px 16px;
+  @media (min-width: @screen-600-min) {
+    padding: 10px 0;
+  }
+}
+
+.h-c-carousel--tile-small-only .h-c-carousel__wrap {
+  @media (min-width: @screen-600-min) {
+    overflow: visible;
+    padding: 0;
+  }
+}
+
+//ul
+.h-c-carousel .glue-carousel {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.h-c-carousel .glue-carousel:after{
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+//todo
+.h-c-carousel--tile-small-only .glue-carousel {
+  //@media (min-width: @screen-600-min) {
+  //  margin: 0 -8px -8px 0;
+  //}
+  @media (min-width: @screen-1024-min) {
+    margin: 0 -26px -26px 0;
+  }
+}
+//todo
+
+//.h-c-carousel .glue-carousel {
+//  cursor: grab;
+//  width: 10000px;
+//  height: auto;
+//  display: block;
+//}
+
+.h-c-carousel--tile.h-c-carousel .glue-carousel {
+  cursor: default;
+}
+
+// li ------
+.h-c-carousel__item {
+  float: left;
+  width: 100%;
+}
+
+.h-c-carousel--tile .h-c-carousel__item {
+  float: left;
+  margin: 0 0 8px 0;
+  width: 278px;
+  @media (min-width: @screen-600-min) {
+    margin-bottom: 8px;
+  }
+  @media (min-width: @screen-1024-min) {
+    margin-bottom: 26px;
+    width: 326px;
+  }
+}
+
+.h-c-carousel--tile .h-c-carousel__item {
+  margin-bottom: 0;
+  @media (min-width: @screen-600-min) {
+    margin-bottom: 0;
+  }
+  @media (min-width: @screen-1024-min) {
+    margin-bottom: 0;
+  }
+}
+
+.h-c-carousel--tile-small-only .h-c-carousel__item {
+  @media (min-width: @screen-600-min) {
+    padding-bottom: 8px;
+  }
+  @media (min-width: @screen-1024-min) {
+    padding-bottom: 26px;
+  }
+}
+
+
+/*    dog */
+.h-c-carousel--tile-small-only .h-c-carousel__navigation {
+  @media (min-width: @screen-600-min) {
+    display: none;
+  }
+}
+
+
+.h-c-carousel__navigation .glue-pagination-page-list {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.h-c-carousel__navigation .glue-pagination-page-list .glue-o-pagination__button, .h-c-carousel__navigation .glue-pagination-page-list .glue-o-pagination__button-container {
+  height: 18px;
+}
+
+.h-c-carousel .glue-o-pagination__button {
+  -webkit-appearance: none;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  display: block;
+  font: inherit;
+  outline: 0;
+  padding: 0;
+}
+
+.h-c-carousel__navigation {
+  align-items: center;
+  bottom: -30px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+.h-c-carousel__navigation .glue-pagination-page-list .glue-o-pagination__button {
+  -webkit-appearance: none;
+  background: 0 0;
+  border-radius: 0;
+  cursor: pointer;
+  height: 18px;
+  padding: 0;
+  position: relative;
+  text-indent: -9999px;
+  width: 18px;
+}
+
+.h-c-carousel__navigation .glue-pagination-page-list .glue-o-pagination__button:before {
+  border: 1px solid #202124;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 10px;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  width: 10px;
+}
+
+.h-c-carousel__navigation .glue-pagination-page-list .active .glue-o-pagination__button:before {
+  background: #202124;
+}
